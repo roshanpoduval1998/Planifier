@@ -1,0 +1,20 @@
+{
+  "name": "Planifier",
+  "version": "2.3.0",
+  "description": "Planifier Javascript app\\",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Roshan poduval",
+  "license": "Roshan Poduval Software",
+  "dependencies": {
+    "electron": "^4.2.4",
+    "electron-notify": "^0.1.0",
+    "node-notifier": "^5.4.0",
+    "push.js": "^1.0.9"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.1.1"
+  }
+}

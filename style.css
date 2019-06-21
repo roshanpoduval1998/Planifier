@@ -1,0 +1,624 @@
+.mainframe{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 23px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	-webkit-user-select: none;
+	display: block;
+	font-family: segoe ui;
+	background-image: linear-gradient(to right top, #051937, #181c34, #212031, #27252e, #2b2a2c);
+}
+
+.titlebar{
+	-webkit-app-region: drag;
+	background-color: transparent;
+	width:100%;
+	position: fixed;
+}
+
+.header{
+    background-color: transparent;
+    color: black;
+    font-family: "Segoe Ui";
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 3px;
+    outline: none;
+    border: none;
+}
+
+.win_control{
+    -webkit-app-region: no-drag;
+    float: right;
+}
+
+.exit{
+	background-color: transparent;
+	font-size: 10px;
+	color: white;
+	border:none;
+	padding-top: 3px;
+	outline: none;
+	width: 50px;
+	height: 30px;
+	font-family: "Segoe MDL2 Assets";
+}
+
+.exit:Hover {
+	background-color: red;
+}
+
+.maximize{
+	background-color: transparent;
+	font-size: 10px;
+	color: white;
+	border:none;
+	padding-top: 3px;
+	outline: none;
+	width: 50px;
+	height: 30px;
+	font-family: "Segoe MDL2 Assets";
+}
+
+.maximize:Hover {
+	background-color: #d8e7ff;
+}
+
+.minimize{
+	background-color: transparent;
+	font-size: 10px;
+	color: white;
+	border:none;
+	padding-top: 3px;
+	outline: none;
+	width: 50px;
+	height: 30px;
+	font-family: "Segoe MDL2 Assets";
+}
+
+.minimize:Hover {
+	background-color: #d8e7ff;
+}
+
+#titlebar #minimize {
+	-webkit-app-region: no-drag;
+}
+
+#titlebar #maximize {
+	-webkit-app-region: no-drag;
+}
+
+#titlebar #exit {
+	-webkit-app-region: no-drag;
+}
+
+.app_frame{
+    height: 91vh;
+    overflow: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -10px;
+}
+.app_frame::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+.app_frame::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.app_frame::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.app_frame::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*creating help button*/
+
+.help{
+	font-family: "Segoe MDL2 Assets";
+	background-color: white;
+	color: blue;
+	border: none;
+	font-size: 30px;
+	border-radius: 50px;
+	padding-left: 30px;
+	padding-top: 6px;
+	padding-bottom: 5px;
+	margin-left: -25px;
+	outline: none;
+	box-shadow: 0 0 10px;
+	transition: .6s;
+}
+
+.help:Hover {
+	color: white;
+	background-color: #982ba0;
+	transition: .3s;
+}
+
+/*creating create task button*/
+
+.create_task_window{
+	font-size: 50px;
+	text-decoration: unset;
+	margin-left: 40px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px;
+	transition: .6s;
+}
+
+.create_task_window:Hover {
+	color: white;
+	background-color: #663AAE;
+	transition: .3s;
+}
+
+/*creating pop_up_create task*/
+
+.create_task {
+	width: 510px;
+	height: 140px;
+	background-color: white;
+	border-style: solid;
+	box-shadow: 0 0 10px;
+	border-radius: 10px;
+	margin-left: 60px;
+	margin-top: -85px;
+}
+
+.create_task .close {
+	font-family: segoe ui;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: unset;
+	color: black;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-right: 3px;
+	border-radius: 5px;
+}
+
+.create_task .close:Hover {
+	background-color: red;
+	color: white;
+}
+
+.create_task .date{
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.create_task .pop_up_block {
+	font-family: segoe ui;
+	background-color: white;
+	border-color: #DDDDDD;
+	width: 435px;
+	height: 115px;
+	margin-left: 20px;
+	padding:10px;
+	outline: none;
+	resize: none;
+	color: #A000FF;
+	font-size: 20px;
+	border-radius: 10px 0px 0px 10px;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: -10px;
+	box-shadow: 0 0 30px #719ECE;
+}
+
+.create_task .pop_up_block:focus {
+    box-shadow: 0 0 30px #719ECE;
+}
+
+.create_task .pop_up_block::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+.create_task .pop_up_block::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.create_task .pop_up_block::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.create_task .pop_up_block::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.create_task .done{
+	font-size: 20px;
+	text-decoration: unset;
+	background-color: transparent;
+	border-radius: 15px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	font-family: "Segoe MDL2 Assets";
+	margin-top: -30px;
+	margin-right: 10px;
+}
+
+.create_task .done:Hover {
+	color: white;
+	background-color: #982ba0;
+}
+
+/*create task cards by appending*/
+
+.task_val{
+	cursor: default;
+	-webkit-user-select: none;
+	font-family: segoe ui;
+	border-color: #DDDDDD;
+	margin-left: 20px;
+	padding:10px;
+	outline: none;
+	resize: none;
+	color: #A000FF;
+	font-size: 30px;
+	width: 900px;
+	height: 200px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: 1s;
+}
+
+.task_val::selection {
+	background-color: transparent;
+}
+
+.task_val:Hover {
+	background-color: #54C2E4;
+	color: white;
+	transition: .5s;
+	border-radius: 0px;
+	box-shadow: 0 0 60px white;
+	width: 910px;
+	height: 210px;
+	border-radius: 10px;
+}
+
+.task_val:after {
+	transition: .5s;
+}
+
+.task_val::-webkit-scrollbar {
+	width: 5px;
+}
+
+.task_val::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 50%;
+}
+
+.task_val::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/*create right click on the cards*/
+
+.show {
+	width: 445px;
+	height: 220px;
+	background-color: white;
+    position: absolute;
+    font-size: 30px;
+    font-family: segoe ui;
+    box-shadow: 0 0 1111px black;
+    padding: 2px;
+    margin: 0;
+    border-radius: 10px;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+/* rightclick only visible when called*/
+
+.close_context {
+	background-color: transparent;
+	width:25px;
+	border: none;
+	outline: none;
+	float: right;
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+	margin-top: -1px;
+	margin-right: 1px;
+}
+
+.close_context:Hover {
+	border-radius: 10px;
+	color: white;
+	background-color: #982ba0;
+	transition: .3s;
+}
+
+._rmenu_1 {
+	width:200px;
+	outline: none;
+	margin-left: 120px;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	background-color: transparent;
+	border: none;
+}
+
+._rmenu_2 {
+	width:200px;
+	outline: none;
+	margin-left: 120px;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 20px;
+	box-shadow: 0 0 10px black;
+	background-color: transparent;
+	border: none;
+}
+
+._rmenu_1:Hover {
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+	transition: .3s;
+}
+
+._rmenu_2:Hover {
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+	transition: .3s;
+}
+
+/*creating edit card */
+
+.show_edit {
+	width: 438px;
+	height: 213px;
+	border-style: solid;
+	box-shadow: 0 0 1111px black;
+	background-color: white;
+    position: absolute;
+    font-family: segoe ui;
+    padding: 2px;
+    display: block;
+    margin: 0;
+    border-radius: 10px;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.show_edit ._pop_up_block {
+	font-family: segoe ui;
+	font-size: 20px;
+	float: left; 
+	margin-top: 0px; 
+	margin-left: 0px; 
+	border-radius: 15px;
+	width: 416px;
+	height: 118px;
+	background-color: transparent;
+	border-radius: 8px 8px 0px 0px;
+	box-shadow: 0 0 10px black;
+	padding: 10px;
+	outline: none;
+	resize: none;
+}
+
+.show_edit .close {
+	width:180px;
+	outline: none;
+	text-decoration: unset;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	font-weight: bold;
+	color: red;
+}
+
+.show_edit .close:Hover {
+	transition: all 0.3s ease-out;
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+}
+
+.show_edit .done{
+	width:180px;
+	outline: none;
+	text-decoration: unset;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+	color: green;
+}
+
+.show_edit .done:Hover {
+	transition: all 0.3s ease-out;
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+}
+
+.disabler{
+	-webkit-user-select: none;
+	pointer-events:none;
+	opacity: 0.2;
+}
+
+.enabler{
+	-webkit-user-select: auto;
+	pointer-events:auto;
+	opacity: 1;
+}
+
+.alert_1 {
+	font-family: segoe ui;
+	font-size: 15px;
+	float: left; 
+	margin-top: 0px; 
+	margin-left: 0px; 
+	border-radius: 15px;
+	width: 422px;
+	height: 118px;
+	background-color: transparent;
+	border-radius: 8px 8px 0px 0px;
+	border: none;
+	padding: 10px;
+	outline: none;
+	resize: none;
+	user-select: none;
+	text-align: center;
+}
+
+.alert_1::-webkit-scrollbar {
+	width: 5px;
+}
+
+.alert_1::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 50%;
+}
+
+.alert_1::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.alert_1::selection {
+	background-color: transparent;
+}
+
+.alert_2 {
+	width:200px;
+	outline: none;
+	margin-left: 120px;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 20px;
+	box-shadow: 0 0 10px black;
+	background-color: transparent;
+	border: none;
+}
+
+.alert_2:Hover {
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+	transition: .3s;
+}
+
+.task_complete {
+	width: 438px;
+	height: 213px;
+	border-style: solid;
+	box-shadow: 0 0 1111px black;
+	background-color: white;
+    position: absolute;
+    font-family: segoe ui;
+    padding: 2px;
+    margin: 0;
+    border-radius: 10px;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.complete_pop_up_block {
+	font-family: segoe ui;
+	font-size: 15px;
+	float: left; 
+	margin-top: 0px; 
+	margin-left: 0px; 
+	border-radius: 15px;
+	width: 416px;
+	height: 118px;
+	color: black;
+	border-radius: 8px 8px 0px 0px;
+	box-shadow: 0 0 10px black;
+	padding: 10px;
+	outline: none;
+	resize: none;
+	background-color: white;
+	text-align: center;
+}
+
+.not_done {
+	width:180px;
+	outline: none;
+	text-decoration: unset;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	font-weight: bold;
+	color: red;
+}
+
+.not_done:Hover {
+	transition: all 0.3s ease-out;
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+}
+
+.done_task {
+	width:180px;
+	outline: none;
+	text-decoration: unset;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+	color: green;
+}
+
+.done_task:Hover {
+	transition: all 0.3s ease-out;
+	color: white;
+	background-color: #982ba0;
+	box-shadow: 0 0 10px black;
+}

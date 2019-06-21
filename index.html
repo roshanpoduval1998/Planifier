@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Planifier</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <audio id="notification" src="notification.mp3" preload="auto"></audio>
+    <audio id="help" src="help.mp3" preload="auto"></audio>
+    <audio id="error" src="error.mp3" preload="auto"></audio>
+</head>
+<body class="mainframe" onload="startTime()" id="mainframe">
+	<div id="inframe">
+		<div class="titlebar" id="titlebar" ondblclick="titlebar_()">
+
+	        <button class="header" id="header">Planifier</button>
+
+	        <span class="win_control">
+	            <button class="minimize" id="minimize" onclick="minimize_()">&#xE921;</button>
+	            <button class="maximize" id="maximize" onclick="maximize_()">&#xE922;</button>
+	            <button class="exit" id="exit" onclick="exit_()">&#xE8BB;</button>
+	        </span>
+
+		</div>
+		<br><br>
+
+		<div class="app_frame" id="app_frame"><br>
+			
+			<button class="help" id="help" onclick="createHelp()">&#xE9CE;</button>
+			<a class="create_task_window" id="create_task_window" href="javascript:createWindow('create_task')">Create Task >></a>
+
+			<div class="create_task" id="create_task" hidden>
+				<textarea placeholder="Enter the task" class="pop_up_block" id="pop_up_block" ></textarea>
+				<span style="float: right">
+					<a class="close" id="close" href="javascript:createWindow('create_task')">X</a>
+				</span>
+				<a style="float: right" class="done" id="done" style="margin-top: -20px" href="javascript:get_task_details('task_input')">&#xE72A;</a>
+			</div>
+			<br><br>
+
+			<div id="task">
+			</div>
+		</div>
+
+	</div>
+	<div class="create_task" id="edit_task" hidden>
+		<span>
+			<textarea placeholder="Edit the task" class="_pop_up_block" id="_pop_up_block" ></textarea><br><br><br>
+			<a class="done" id="edit_" href="javascript:edit_task_details('task_input')">✔</a>
+			<a class="close" id="_close_">X</a>
+		</span>
+	</div>
+    <div id="rmenu" hidden>
+    	<span class="close_context" id="close_context">X</span><br>
+    	<button class="_rmenu_1" id="edit">Edit</button><br>
+        <button class="_rmenu_2" id="del">Delete</button>
+    </div>
+    <div id="alert_" hidden>
+    	<textarea class="alert_1" id="alert_label" disabled></textarea><br>
+        <button class="alert_2" id="alert_ok">Ok</button>
+    </div> 
+    <div class="date" id="date" hidden>
+    </div>
+	<div id="task_complete" class="task_complete" hidden>
+		<span>
+			<textarea class="complete_pop_up_block" id="complete_pop_up_block" disabled></textarea><br><br><br>
+			<a class="done_task" id="done_task">✔</a>
+			<a class="not_done" id="not_done">X</a>
+		</span>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
